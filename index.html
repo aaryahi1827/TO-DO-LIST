@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./TO-DO.css">
+</head>
+
+<body>
+
+    <!-- Main container with gradient background -->
+    <div class="container">
+
+        <!-- White card-like box for the to-do app -->
+        <div class="To-Do">
+
+            <!-- Heading of the to-do app with an icon -->
+            <h1>
+                To-Do List
+                <img src="to-do-list.png" class="todo-icon">
+            </h1>
+
+            <!-- Task input section with an input box and an "Add" button -->
+            <div class="task">
+                <input type="text" id="input-box" placeholder="Enter Your Task">
+                <button onclick="enterTask()">Add</button>
+            </div>
+
+            <!-- Unordered list to display tasks -->
+            <ul id="list">
+                <!-- Example tasks (you can uncomment for testing)
+                <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> 
+                -->
+            </ul>
+        </div>
+    </div>
+    <script src="./TO-DO.js"></script>
+</body>
+
+</html>

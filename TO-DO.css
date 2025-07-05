@@ -1,0 +1,192 @@
+/* This CSS is applied to whole html doc. */
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Indie Flower', cursive;
+    box-sizing: border-box;
+}
+
+/* This creates the background for to-do list.
+The width and min-height is for space, background-color and then the padding is for top. */
+.container {
+    width: 100%;
+    min-height: 97vh;
+    background: linear-gradient(to bottom, #ff9900, #fdd03d);
+    ;
+    padding: 10px;
+}
+
+/* This is just for the white background behind the to-do heading.
+nothing to do with the icon the height and width of the icon is set in html.*/
+.To-Do {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    margin: 50px;
+    margin-left: 365px;
+    height: 80vh;
+    /* full viewport height */
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+
+}
+
+/* This is for the to-do title */
+.To-Do h1 {
+    color: rgb(177, 171, 7);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/* This is for the to-do icon */
+.todo-icon {
+    height: 70px;
+    width: 70px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* This is for the background of the enter your task input */
+.task {
+    display: flex;
+    border-radius: 40px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(234, 243, 149);
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* This is for the enter your task input box */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: larger;
+    font-family: 'Indie Flower', cursive;
+}
+
+/* This is for the ADD button */
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: rgb(201, 204, 44);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* This is for the task 1,task 2,task 3 etc */
+ul li {
+    list-style: none;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #000000; 
+}
+
+/* This is for the circle which is given before the task. the small check box circle */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-image: url('download\ circle.png');
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 8px;
+}
+
+/* This is for the strike through across the task */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* This is for the orange dot */
+ul li.checked::before {
+    background-image: url('circle-xxl.png');
+}
+
+/* This is for cross icon for deletion */
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* This is for the color on the cross icon on hovering icon */
+ul li span:hover {
+    background-color: #edeef0;
+}
+
+/* iphone SE 375 x 667 */
+@media only screen and (max-width: 400px) {
+    .To-Do {
+        margin: 20px auto;
+        width: 90%;
+        height: 90vh;
+        padding: 20px;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .todo-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    ul li {
+        font-size: 18px;
+        padding-left: 40px;
+    }
+
+    ul li::before {
+        height: 24px;
+        width: 24px;
+        top: 8px;
+        left: 5px;
+    }
+
+    ul li span {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
